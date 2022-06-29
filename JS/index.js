@@ -34,10 +34,10 @@ MusicPlayerFunction(MusicPlayerName[index]);
 musicPlay.addEventListener("click",justPlay);
 
 function justPlay(){
+  faPauserMusicPlayer();
   audio.play();
   musicPlay.style.display = "none";
   musicPause.style.display = "block";
-
 }
 
 // MUSIC PAUSE TO THE CODES START 
@@ -107,6 +107,7 @@ function faPlayerMusicPlayer(){
   faPlay.style.display = "none";
   faPause.style.display = "block";
   MusicPlayerFunction(MusicPlayerName[index]);
+  justPause();
   audio.play();
 }
 
