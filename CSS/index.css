@@ -1,0 +1,251 @@
+/* /============================================ BASIC TO THE CODES START =================================== \ */
+@font-face {
+  font-family: 'Lato';
+  src: url("../FONT/Lato-Light.ttf");
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../FONT/OPEN SANS/OpenSans/OpenSans-Light.ttf");
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+:root {
+  --link-color: #ffff;
+  --bg-color: #000;
+  --text-color: #222222;
+  --setProgress: rgb(0, 153, 255);
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 60px;
+  /* overflow-x: hidden; */
+}
+
+
+/* /============================================ BASIC TO THE CODES END ===================================== \ */
+
+/* /============================================ HEADER TO THE CODES START =================================== \ */
+.header {
+  height: 100px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+
+.nav {
+  height: 100px;
+  width: 100%;
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav .nav__intro {
+  color: var(--bg-color);
+  font-size: 35px;
+}
+
+.nav .nav__list .nav__item {
+  display: inline-block;
+  transition: all .3s linear;
+}
+
+.nav .nav__list .nav__item .nav__link {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  padding: 0 20px;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--bg-color);
+  letter-spacing: 0.02em;
+
+}
+
+.nav__text{
+  color: var(--text-color);
+  font-size: 30px;
+  font-family: "Lato",sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* /============================================ HEADER TO THE CODES END ===================================== \ */
+
+
+/* /============================================ SECTION TO THE CODES END ===================================== \ */
+.section__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70vh;
+}
+
+.section__box.active {
+  width: 430px;
+}
+
+.section__box_content_paragraph.active {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 8.5px;
+  color: var(--bg-color);
+}
+
+.section__box_music_play_border{
+  width: 300px;
+  /* padding: 5px; */
+  height: 5px;
+  cursor: pointer;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  
+}
+.section__box_music_play_border_box{
+  height: 100%;
+  width: 0;
+  box-shadow: 7px 7px 14px #d9d9d9,
+  -7px -7px 14px #ffffff;
+  background-color: var(--setProgress);
+}
+.section__box_content_title {
+  font-family: 'Lato', sans-serif;
+  font-weight: 1000;
+  font-size: 48px;
+  line-height: 65px;
+  color: var(--text-color);
+}
+
+.section__box_content_paragraph {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 46px;
+  letter-spacing: 0.03em;
+  opacity: .8;
+  color: var(--text-color);
+  margin: 25px 0;
+}
+
+.section__box_content_buttons {
+  display: flex;
+}
+
+.section__box_content_buttons_btn.active {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: var(--link-color);
+  background-color: var(--text-color);
+  padding: 10px 50px;
+  border: 2px solid var(--text-color);
+  transition: all .3s linear;
+}
+
+.section__box_content_buttons_btn.active:hover{
+  background-color: var(--link-color);
+  color: var(--text-color);
+}
+
+.section__box_content_buttons_btn {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--text-color);
+  margin: 0 5px;
+  padding: 10px 40px;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.fa-circle-play {
+  color: var(--text-color);
+  font-size: 20px;
+  margin: 0 0 0 10px;
+}
+
+.section__box_music_play_img {
+  height: 300px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 7px 7px 14px #d9d9d9,
+              -7px -7px 14px #ffffff;
+              padding: 10px;
+}
+
+.section__box_music_play_title{
+  text-align: center;
+  margin: 25px 0;
+  font-family: 'Lato',sans-serif;
+  font-weight: 1000;
+  font-size: 30px;
+  letter-spacing: 1.5px;
+}
+
+.section__box_music_play_icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px 0 0 10px;
+}
+
+.section__box_music_play_icons i {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 7px 7px 14px #d9d9d9,
+              -7px -7px 14px #ffffff;
+  padding: 30px;
+  cursor: pointer;
+}
+
+.fa-pause{
+  display: none;
+}
+
+.section__box_music_play_icons .fa-pause{
+  display: none;
+}
+
+.fa-pause{
+  margin: 0 0 0 15px;
+}
+
+/* /============================================ SECTION TO THE CODES END ===================================== \ */

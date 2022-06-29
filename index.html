@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./CSS/index.css" />
+    <link rel="icon" href="./IMG/LOGO/music-logo.png" />
+    <title>Web Music</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <a class="nav__intro" href="index.html">
+            <i class="fa fa-music"></i>
+          </a>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link">Music</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Podcast</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Live</a>
+            </li>
+          </ul>
+          <p class="nav__text">01/03</p>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <section class="section">
+        <div class="section__container">
+          <div class="section__box active">
+            <div class="section__box_content">
+              <p class="section__box_content_paragraph active">MUSIC SHOW</p>
+              <h1 class="section__box_content_title">
+                Enjoy your life by listening to music
+              </h1>
+              <p class="section__box_content_paragraph">
+                Simple Music with the traditional arransmen for new event in the
+                World
+              </p>
+              <div class="section__box_content_buttons">
+                <button class="section__box_content_buttons_btn active">
+                  Event
+                </button>
+                <button class="section__box_content_buttons_btn">
+                  Show Audios <i class="fa-solid fa-circle-play"></i> <i class="fa fa-pause" id="fa-pause"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="section__box">
+            <div class="section__box_music_play">
+              <audio id="audio" src=""></audio>
+              <img
+                class="section__box_music_play_img"
+                src=""
+                alt="Burn It down"
+              />
+              <h1 class="section__box_music_play_title">Name</h1>
+              <div class="section__box_music_play_border">
+                <div class="section__box_music_play_border_box"></div>
+              </div>
+              <div class="section__box_music_play_icons">
+                <i class="fas fa-backward"></i>
+                <i class="fas fa-play"></i>
+                <i class="fas fa-pause"></i>
+                <i class="fas fa-forward"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="./JS/index.js"></script>
+  </body>
+</html>
