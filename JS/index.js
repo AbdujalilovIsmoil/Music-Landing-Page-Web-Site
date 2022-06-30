@@ -152,3 +152,5 @@ function pauserVideo(){
   playVideo.style.display = "block";
   pauseVideo.style.display = "none";
 }
+
+
