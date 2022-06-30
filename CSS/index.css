@@ -20,12 +20,22 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-
 :root {
   --link-color: #ffff;
   --bg-color: #000;
   --text-color: #222222;
   --setProgress: rgb(0, 153, 255);
+  --shadow: #E5E5E5;
+  --icon-color: #adacac;
+  --section-text-color: #444444;
+  --star-color: #F7B500;
+  --video-text-color: #181539;
+  --rock-music-text-color: #03014C;
+}
+
+::selection {
+  background-color: var(--section-text-color);
+  color: var(--link-color);
 }
 
 .container {
@@ -33,7 +43,6 @@
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 60px;
-  /* overflow-x: hidden; */
 }
 
 
@@ -45,9 +54,24 @@
   width: 100%;
   position: sticky;
   top: 0;
+  transition: all .3s linear;
+}
+
+.header.active {
+  transition: all .3s linear;
+  height: 50px;
+  background-color: var(--link-color);
+  z-index: 1;
+  box-shadow: 0 1px 2px var(--bg-color);
+}
+
+.header.active .nav {
+  height: 50px;
+  transition: all .3s linear;
 }
 
 .nav {
+  transition: all .3s linear;
   height: 100px;
   width: 100%;
   position: sticky;
@@ -79,10 +103,10 @@
 
 }
 
-.nav__text{
+.nav__text {
   color: var(--text-color);
   font-size: 30px;
-  font-family: "Lato",sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -90,18 +114,18 @@
 /* /============================================ HEADER TO THE CODES END ===================================== \ */
 
 
-/* /============================================ SECTION TO THE CODES END ===================================== \ */
-.section__container {
+/* /============================================ MAIN TO THE CODES END ===================================== \ */
+.main__section_container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.section__box.active {
+.main__section_box.active {
   width: 430px;
 }
 
-.section__box_content_paragraph.active {
+.main__section_box_content_paragraph.active {
   font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -111,23 +135,24 @@
   color: var(--bg-color);
 }
 
-.section__box_music_play_border{
+.main__section_box_music_play_border {
   width: 300px;
-  /* padding: 5px; */
   height: 5px;
   cursor: pointer;
   background-color: var(--bg-color);
   border-radius: 10px;
-  
+
 }
-.section__box_music_play_border_box{
+
+.main__section_box_music_play_border_box {
   height: 100%;
   width: 0;
   box-shadow: 7px 7px 14px #d9d9d9,
-  -7px -7px 14px #ffffff;
+    -7px -7px 14px #ffffff;
   background-color: var(--setProgress);
 }
-.section__box_content_title {
+
+.main__section_box_content_title {
   font-family: 'Lato', sans-serif;
   font-weight: 1000;
   font-size: 48px;
@@ -135,7 +160,7 @@
   color: var(--text-color);
 }
 
-.section__box_content_paragraph {
+.main__section_box_content_paragraph {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
@@ -147,11 +172,11 @@
   margin: 25px 0;
 }
 
-.section__box_content_buttons {
+.main__section_box_content_buttons {
   display: flex;
 }
 
-.section__box_content_buttons_btn.active {
+.main__section_box_content_buttons_btn.active {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 700;
@@ -161,16 +186,16 @@
   color: var(--link-color);
   background-color: var(--text-color);
   padding: 10px 50px;
-  border: 2px solid var(--text-color);
+  border: 1px solid var(--text-color);
   transition: all .3s linear;
 }
 
-.section__box_content_buttons_btn.active:hover{
+.main__section_box_content_buttons_btn.active:hover {
   background-color: var(--link-color);
   color: var(--text-color);
 }
 
-.section__box_content_buttons_btn {
+.main__section_box_content_buttons_btn {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 700;
@@ -193,7 +218,7 @@
   margin: 0 0 0 10px;
 }
 
-.section__box_music_play_img {
+.main__section_box_music_play_img {
   height: 300px;
   width: 300px;
   display: flex;
@@ -203,48 +228,385 @@
   border-radius: 50%;
   background: #ffffff;
   box-shadow: 7px 7px 14px #d9d9d9,
-              -7px -7px 14px #ffffff;
-              padding: 10px;
+    -7px -7px 14px #ffffff;
+  padding: 10px;
 }
 
-.section__box_music_play_title{
+.main__section_box_music_play_title {
   text-align: center;
   margin: 25px 0;
-  font-family: 'Lato',sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 1000;
   font-size: 30px;
   letter-spacing: 1.5px;
 }
 
-.section__box_music_play_icons {
+.main__section_box_music_play_icons {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 40px 0 0 10px;
 }
 
-.section__box_music_play_icons i {
+.main__section_box_music_play_icons i {
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #ffffff;
   box-shadow: 7px 7px 14px #d9d9d9,
-              -7px -7px 14px #ffffff;
+    -7px -7px 14px #ffffff;
   padding: 30px;
   cursor: pointer;
 }
 
-.fa-pause{
+.fa-pause {
   display: none;
 }
 
-.section__box_music_play_icons .fa-pause{
+.main__section_box_music_play_icons .fa-pause {
   display: none;
 }
 
-.fa-pause{
+.fa-pause {
   margin: 0 0 0 15px;
 }
 
-/* /============================================ SECTION TO THE CODES END ===================================== \ */
+/* /============================================ MAIN TO THE CODES END ===================================== \ */
+
+
+/* /============================================ SECTION TO THE CODES START ================================ \ */
+.section__container {
+  margin: 200px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+
+.section__box_img {
+  width: 476px;
+  height: 476px;
+  border-radius: 16px;
+}
+
+.section__box {
+  position: relative;
+}
+
+.section__box_cart {
+  height: 274px;
+  width: 303px;
+  padding: 50px;
+  background-color: var(--link-color);
+  border-radius: 16px;
+  box-shadow: 10px 10px 10px var(--shadow);
+  position: absolute;
+  bottom: -130px;
+  left: 250px;
+}
+
+.section__box_cart .section__box_cart_link {
+  font-family: 'Nunito Sans', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: var(--link-color);
+  border-radius: 4px;
+  padding: 20px 40px;
+  background-color: var(--bg-color);
+  position: absolute;
+  bottom: -30px;
+  left: 70px;
+  transition: all .3s linear;
+  border: 1px solid var(--bg-color);
+}
+
+.section__box_cart .section__box_cart_link:hover {
+  background-color: var(--link-color);
+  color: var(--bg-color);
+}
+
+.section__box_cart_label {
+  font-family: 'Nunito Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 22px;
+  color: var(--text-color);
+  letter-spacing: 0.5px;
+}
+
+.section__box_cart_form_content_paragraph {
+  font-family: 'Nunito Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  color: var(--section-text-color);
+  padding: 10px 0;
+}
+
+.section__box_cart_form_content {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(34, 34, 34, 0.15);
+}
+
+.section__box_cart_form.active {
+  margin: 25px 0 0 0;
+}
+
+.fa-check-circle {
+  padding: 10px 0;
+  color: var(--icon-color);
+}
+
+.section__box_content_title {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-size: 35px;
+  line-height: 57px;
+  color: var(--text-color);
+  letter-spacing: 0.5px;
+}
+
+.section__box_content_paragraph {
+  font-family: 'Open Sans';
+  font-style: normal;
+  margin: 15px 0 0 0;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 34px;
+  color: var(--text-color);
+  letter-spacing: 0.5px;
+}
+
+/* /============================================ SECTION TO THE CODES END =============================== \ */
+
+/* /============================================ SECTION TO THE CODES START ============================ \ */
+.section__box_container_second {
+  margin: 400px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+
+.section__box_second_title {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 57px;
+  color: var(--text-color);
+  letter-spacing: 0.5px;
+}
+
+.section__box_second_paragraph_first {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 0.5px;
+  color: var(--section-text-color);
+  margin: 25px 0;
+}
+
+.section__box_second_paragraph_second {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: var(--section-text-color);
+  letter-spacing: 0.5px;
+  margin: 25px 0 50px 0;
+}
+
+.section__box_second_link {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: var(--section-text-color);
+  border-radius: 4px;
+  padding: 15px 40px;
+  border: 1px solid var(--text-color);
+  transition: all .3s linear;
+}
+
+.section__box_second_link:hover {
+  background-color: var(--section-text-color);
+  color: var(--link-color);
+}
+
+.section__box_second {
+  position: relative;
+}
+
+.section__box_second_img {
+  width: 456px;
+  height: 456px;
+  border-radius: 16px;
+}
+
+.section__box_second_cart {
+  width: 400ex;
+  height: 266px;
+  background-color: var(--link-color);
+  border-radius: 16px;
+  position: absolute;
+}
+
+/* /============================================ SECTION TO THE CODES END =============================== \ */
+
+
+/* /============================================ SECTION TO THE CODES START ============================= \ */
+.section__box_third_content_videos {
+  position: relative;
+}
+
+.section__box_third {
+  margin: 200px 0 0 0;
+  text-align: center;
+}
+
+.section__box_third_content_video {
+  height: 455px;
+  width: 100%;
+}
+
+.section__box_third_content_title {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 1000;
+  font-size: 36px;
+  color: var(--video-text-color);
+  line-height: 49px;
+}
+
+.section__box_third_content_paragraph {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: var(--section-text-color);
+  letter-spacing: 0.5px;
+  margin: 25px 0;
+}
+
+.section__box_third_content_icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--link-color);
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  bottom: 40%;
+  right: 45%;
+  cursor: pointer;
+}
+
+#section__box_third_content_play {
+  font-size: 30px;
+  color: var(--link-color);
+  margin: 0 0 0 3px;
+}
+
+#section__box_third_content_pause {
+  font-size: 30px;
+  color: white;
+  display: none;
+  margin: 0 3px 0 0;
+}
+
+/* /============================================ SECTION TO THE CODES END =============================== \ */
+
+
+/* /============================================ SECTION TO THE CODES START ============================= \ */
+.section__rock_box_content {
+  text-align: center;
+}
+
+.section__rock_box_content_title {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 46px;
+  color: var(--rock-music-text-color);
+}
+
+.section__rock_box_content_paragraph {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  mix-blend-mode: normal;
+  opacity: 0.7;
+  margin: 15px 0 50px 0;
+}
+
+.section__rock_box_images_box_title {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  color: var(--text-color);
+  mix-blend-mode: normal;
+}
+
+.section__rock_box_images_box_paragraph {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  font-size: 14px;
+  color: var(--section-text-color);
+}
+
+.section__rock_box {
+  margin: 200px 0 0 0;
+}
+
+.section__rock_box_images_container {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 25px;
+
+}
+
+.section__rock_box_images_box_container{
+  width: 230px;
+  height: 325px;
+  overflow: hidden;
+}
+
+.section__rock_box_images_box_img {
+  height: 325px;
+  width: 230px;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: all .4s linear;
+}
+
+.section__rock_box_images_box_img:hover{
+  transform: scale(1.2);
+}
+
+/* /============================================ SECTION TO THE CODES END =============================== \ */
