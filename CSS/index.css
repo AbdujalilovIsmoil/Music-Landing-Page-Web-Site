@@ -38,6 +38,14 @@
   --foter-border-color: #979797;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
 ::selection {
   background-color: var(--section-text-color);
   color: var(--link-color);
@@ -50,6 +58,7 @@
   padding: 0 60px;
   overflow-x: hidden;
 }
+
 
 /* /============================================ BASIC TO THE CODES END ===================================== \ */
 
@@ -89,7 +98,7 @@
 
 .fa-times {
   color: var(--section-text-color);
-  font-size: 30px;
+  font-size: 35px;
   cursor: pointer;
   position: absolute;
   right: 50px;
@@ -107,14 +116,14 @@
 
 .header.active {
   transition: all .3s linear;
-  height: 50px;
+  height: 75px;
   background-color: var(--link-color);
   z-index: 1;
   box-shadow: 0 1px 2px var(--bg-color);
 }
 
 .header.active .nav {
-  height: 50px;
+  height: 75px;
   transition: all .3s linear;
 }
 
@@ -146,7 +155,6 @@
   padding: 0 20px;
   text-transform: uppercase;
   font-size: 18px;
-  line-height: 22px;
   color: var(--bg-color);
   letter-spacing: 0.02em;
 
@@ -162,11 +170,10 @@
 
 .nav__list .fa-bars {
   color: var(--section-text-color);
-  font-size: 30px;
+  font-size: 35px;
   cursor: pointer;
   display: none;
-  line-height: 22px;
-  margin: 0 0 15px 0;
+  margin: 0 0 15px 30px;
 }
 
 /* /============================================ HEADER TO THE CODES END ===================================== \ */
@@ -635,8 +642,28 @@
 }
 
 @media (max-width: 700px) {
+  .container__small {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+
+  .header {
+    height: 100px;
+  }
+
+  .header.active {
+    height: 75px;
+  }
+
+  .header.active .nav {
+    height: 75px;
+  }
+
   .nav {
     justify-content: space-between;
+    height: 100px;
   }
 
   .nav .nav__list .nav__item .nav__link {
@@ -645,19 +672,39 @@
 
   .nav__list .fa-bars {
     display: block;
-    line-height: 100px;
   }
 
-  .fa-music:before {
-    content: "\f001";
+  .fa-music {
     font-size: 30px;
   }
 }
 
 @media (max-width: 500px) {
-  .fa-music:before {
-    content: "\f001";
+  .header.active {
+    height: 75px;
+  }
+
+  .header.active .nav {
+    height: 75px;
+  }
+
+  .header {
+    height: 100px;
+  }
+
+  .nav {
+    height: 100px;
+  }
+
+  .fa-music {
     font-size: 30px;
+  }
+
+  .container__small {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 30px;
   }
 
   .container {
@@ -749,9 +796,24 @@
 }
 
 @media (max-width: 400px) {
-  .fa-music:before {
-    content: "\f001";
+  .header.active {
+    height: 75px;
+  }
+
+  .header.active .nav {
+    height: 75px;
+  }
+
+  .fa-music {
     font-size: 30px;
+  }
+
+  .header {
+    height: 100px;
+  }
+
+  .nav {
+    height: 100px;
   }
 
   .main__section_box_content_title {
@@ -776,8 +838,7 @@
     transition: all .3s linear;
   }
 
-  .fa-bars:before,
-  .fa-navicon:before {
+  .fa-bars {
     margin: 0 0 0 20px;
   }
 
@@ -805,8 +866,23 @@
 }
 
 @media (max-width: 360px) {
-  .fa-music:before {
-    content: "\f001";
+  .header.active {
+    height: 75px;
+  }
+
+  .header.active .nav {
+    height: 75px;
+  }
+
+  .header {
+    height: 100px;
+  }
+
+  .nav {
+    height: 100px;
+  }
+
+  .fa-music {
     font-size: 30px;
   }
 
@@ -932,8 +1008,23 @@
 }
 
 @media (max-width: 350px) {
-  .fa-music:before {
-    content: "\f001";
+  .header.active {
+    height: 75px;
+  }
+
+  .header.active .nav {
+    height: 75px;
+  }
+
+  .header {
+    height: 100px;
+  }
+
+  .nav {
+    height: 100px;
+  }
+
+  .fa-music {
     font-size: 30px;
   }
 
