@@ -1,301 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="./CSS/index.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="icon" href="./IMG/LOGO/music-logo.png" />
 
-    <title>Music Player JS</title>
-  </head>
-  <body>
-    <div class="secret__navbar">
-      <i class="fa fa-times"></i>
-      <ul class="secret__navbar_list">
-        <li class="secret__navbar_item">
-          <a class="secret__navbar_link" href="#">Music</a>
-        </li>
-        <li class="secret__navbar_item">
-          <a class="secret__navbar_link" href="#podcast">Podcast</a>
-        </li>
-        <li class="secret__navbar_item">
-          <a class="secret__navbar_link" href="#live">Live</a>
-        </li>
-      </ul>
-    </div>
-    <!-- /===================================== HEADER TO THE CODES START ================================= \ -->
-    <header class="header">
-      <div class="container">
-        <nav class="nav">
-          <a class="nav__intro" href="index.html">
-            <i class="fa fa-music"></i>
-          </a>
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#" class="nav__link">Music</a>
-            </li>
-            <li class="nav__item">
-              <a href="#podcast" class="nav__link">Podcast</a>
-            </li>
-            <li class="nav__item">
-              <a href="#live" class="nav__link">Live</a>
-            </li>
-            <i class="fa fa-bars"></i>
-          </ul>
-          <div class="nav__icon">
-            <p class="nav__text">01/03</p>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- /===================================== HEADER TO THE CODES END =================================== \ -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./CSS/index.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="icon" href="./IMG/LOGO/music-logo.png" />
 
-    <!-- /===================================== SECTION TO THE CODES START ================================ \ -->
+  <title>Music Player JS</title>
+</head>
+
+<body>
+  <div class="secret__navbar">
+    <i class="fa fa-times"></i>
+    <ul class="secret__navbar_list">
+      <li class="secret__navbar_item">
+        <a class="secret__navbar_link" href="#">Music</a>
+      </li>
+      <li class="secret__navbar_item">
+        <a class="secret__navbar_link" href="#podcast">Podcast</a>
+      </li>
+      <li class="secret__navbar_item">
+        <a class="secret__navbar_link" href="#live">Live</a>
+      </li>
+    </ul>
+  </div>
+  <!-- /===================================== HEADER TO THE CODES START ================================= \ -->
+  <header class="header">
     <div class="container">
-      <main class="main">
-        <div class="main__section_container">
-          <div class="main__section_box active">
-            <div
-              class="main__section_box_content"
-              data-aos="fade-down"
-              data-aos-duration="1000"
-              data-aos-delay="100"
-            >
-              <p class="main__section_box_content_paragraph active">
-                MUSIC SHOW
-              </p>
-              <h1 class="main__section_box_content_title">
-                Enjoy your life by listening to music
-              </h1>
-              <p class="main__section_box_content_paragraph">
-                Simple Music with the traditional arransmen for new event in the
-                World
-              </p>
-              <div class="main__section_box_content_buttons">
-                <button class="main__section_box_content_buttons_btn active">
-                  Event
-                </button>
-                <button class="main__section_box_content_buttons_btn">
-                  Show Audios <i class="fa-solid fa-circle-play"></i>
-                  <i class="fa fa-pause" id="fa-pause"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div
-            class="main__section_box"
-            data-aos="fade-down"
-            data-aos-duration="1000"
-            data-aos-delay="100"
-          >
-            <div class="main__section_box_music_play">
-              <audio id="audio" src=""></audio>
-              <img
-                class="main__section_box_music_play_img"
-                src=""
-                alt="Burn It down"
-              />
-              <h1 class="main__section_box_music_play_title">Name</h1>
-              <div class="main__section_box_music_play_border">
-                <div class="main__section_box_music_play_border_box"></div>
-              </div>
-              <div class="main__section_box_music_play_icons">
-                <i class="fas fa-backward"></i>
-                <i class="fas fa-play"></i>
-                <i class="fas fa-pause"></i>
-                <i class="fas fa-forward"></i>
-              </div>
-            </div>
-          </div>
+      <nav class="nav">
+        <a class="nav__intro" href="index.html">
+          <i class="fa fa-music"></i>
+        </a>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#" class="nav__link">Music</a>
+          </li>
+          <li class="nav__item">
+            <a href="#podcast" class="nav__link">Podcast</a>
+          </li>
+          <li class="nav__item">
+            <a href="#live" class="nav__link">Live</a>
+          </li>
+          <i class="fa fa-bars"></i>
+        </ul>
+        <div class="nav__icon">
+          <p class="nav__text">01/03</p>
         </div>
-      </main>
+      </nav>
     </div>
-    <!-- /===================================== SECTION TO THE CODES END ================================== \ -->
+  </header>
+  <!-- /===================================== HEADER TO THE CODES END =================================== \ -->
 
-    <!-- /===================================== SECTION TO THE CODES START ================================ \ -->
-    <div class="container">
-      <section class="section" id="podcast">
-        <div class="section__container">
-          <div class="section__box">
-            <img
-              data-aos="fade-right"
-              data-aos-duration="1000"
-              data-aos-delay="100"
-              class="section__box_img"
-              src="./IMG/IMAGES/img1.jpg"
-              alt="img1"
-              title="img1"
-            />
-          </div>
-          <div
-            class="section__box"
-            data-aos="fade-left"
-            data-aos-duration="1000"
-            data-aos-delay="100"
-          >
-            <div class="section__box_content">
-              <h1
-                class="section__box_content_title"
-                data-aos="fade-left"
-                data-aos-duration="1000"
-                data-aos-delay="100"
-              >
-                Follow major music events at your place.
-              </h1>
-              <p
-                class="section__box_content_paragraph"
-                data-aos="fade-left"
-                data-aos-duration="1000"
-                data-aos-delay="100"
-              >
-                At vero eos censes aut dolores eos, qui studiose antiqua
-                persequeris, claris et ultimum bonorum, quod summum malum et,
-                quantum possit, a philosophis compluribus permulta dicantur, cur
-                nec me ab illo inventore veritatis et quasi naturalem atque
-                natum sit, a se esse albam, dulce mel.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-    <!-- /===================================== SECTION TO THE CODES END ================================== \ -->
-
-    <!-- /===================================== SECTION TO THE CODES START ================================ \ -->
-    <div class="container">
-      <section class="section" id="live">
-        <div
-          class="section__box_container_second"
-          data-aos="fade-right"
-          data-aos-duration="1000"
-          data-aos-delay="100"
-        >
-          <div class="section__box_second">
-            <h1
-              class="section__box_second_title"
-              data-aos="fade-right"
-              data-aos-duration="1000"
-              data-aos-delay="100"
-            >
-              Music is the greatest thing in your life
+  <!-- /===================================== SECTION TO THE CODES START ================================ \ -->
+  <div class="container">
+    <main class="main">
+      <div class="main__section_container">
+        <div class="main__section_box active">
+          <div class="main__section_box_content" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">
+            <p class="main__section_box_content_paragraph active">
+              MUSIC SHOW
+            </p>
+            <h1 class="main__section_box_content_title">
+              Enjoy your life by listening to music
             </h1>
-            <p
-              class="section__box_second_paragraph_first"
-              data-aos="fade-right"
-              data-aos-duration="1000"
-              data-aos-delay="100"
-            >
+            <p class="main__section_box_content_paragraph">
+              Simple Music with the traditional arransmen for new event in the
+              World
+            </p>
+            <div class="main__section_box_content_buttons">
+              <button class="main__section_box_content_buttons_btn active">
+                Event
+              </button>
+              <button class="main__section_box_content_buttons_btn">
+                Show Audios <i class="fa-solid fa-circle-play"></i>
+                <i class="fa fa-pause" id="fa-pause"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="main__section_box" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">
+          <div class="main__section_box_music_play">
+            <audio id="audio" src=""></audio>
+            <img class="main__section_box_music_play_img" src="" alt="Burn It down" />
+            <h1 class="main__section_box_music_play_title">Name</h1>
+            <div class="main__section_box_music_play_border">
+              <div class="main__section_box_music_play_border_box"></div>
+            </div>
+            <div class="main__section_box_music_play_icons">
+              <i class="fas fa-backward"></i>
+              <i class="fas fa-play"></i>
+              <i class="fas fa-pause"></i>
+              <i class="fas fa-forward"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <!-- /===================================== SECTION TO THE CODES END ================================== \ -->
+
+  <!-- /===================================== SECTION TO THE CODES START ================================ \ -->
+  <div class="container">
+    <section class="section" id="podcast">
+      <div class="section__container">
+        <div class="section__box">
+          <img data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" class="section__box_img"
+            src="./IMG/IMAGES/img1.jpg" alt="img1" title="img1" />
+        </div>
+        <div class="section__box" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">
+          <div class="section__box_content">
+            <h1 class="section__box_content_title" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">
+              Follow major music events at your place.
+            </h1>
+            <p class="section__box_content_paragraph" data-aos="fade-left" data-aos-duration="1000"
+              data-aos-delay="100">
               At vero eos censes aut dolores eos, qui studiose antiqua
               persequeris, claris et ultimum bonorum, quod summum malum et,
               quantum possit, a philosophis compluribus permulta dicantur, cur
-              nec me ab illo inventore veritatis et quasi naturalem atque natum
-              sit, a se esse albam, dulce mel.
+              nec me ab illo inventore veritatis et quasi naturalem atque
+              natum sit, a se esse albam, dulce mel.
             </p>
-            <p
-              class="section__box_second_paragraph_second"
-              data-aos="fade-right"
-              data-aos-duration="1000"
-              data-aos-delay="100"
-            >
-              At vero eos censes aut dolores eos, qui studiose antiqua
-              persequeris, claris et ultimum bonorum.
-            </p>
-            <a
-              class="section__box_second_link"
-              href="#"
-              data-aos="fade-right"
-              data-aos-duration="1000"
-              data-aos-delay="100"
-            >
-              Show All
-            </a>
-          </div>
-          <div
-            class="section__box_second"
-            data-aos="fade-left"
-            data-aos-duration="1000"
-            data-aos-delay="100"
-          >
-            <img
-              data-aos="fade-left"
-              data-aos-duration="1000"
-              data-aos-delay="100"
-              class="section__box_second_img"
-              src="./IMG/IMAGES/img2.jpg"
-              alt="img2"
-            />
           </div>
         </div>
-      </section>
-    </div>
-    <!-- /===================================== SECTION TO THE CODES END ================================== \ -->
+      </div>
+    </section>
+  </div>
+  <!-- /===================================== SECTION TO THE CODES END ================================== \ -->
 
-    <!-- /===================================== SECTION TO THE CODES START ================================ \ -->
-    <div class="container">
-      <div class="section__box_third">
-        <div class="section__box_third_content">
-          <h1
-            class="section__box_third_content_title"
-            data-aos="zoom-in-down"
-            data-aos-duration="1000"
-            data-aos-delay="100"
-          >
-            Improve your chances of getting event
+  <!-- /===================================== SECTION TO THE CODES START ================================ \ -->
+  <div class="container">
+    <section class="section" id="live">
+      <div class="section__box_container_second" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
+        <div class="section__box_second">
+          <h1 class="section__box_second_title" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
+            Music is the greatest thing in your life
           </h1>
-          <p
-            class="section__box_third_content_paragraph"
-            data-aos="zoom-in-down"
-            data-aos-duration="1000"
-            data-aos-delay="100"
-          >
+          <p class="section__box_second_paragraph_first" data-aos="fade-right" data-aos-duration="1000"
+            data-aos-delay="100">
             At vero eos censes aut dolores eos, qui studiose antiqua
             persequeris, claris et ultimum bonorum, quod summum malum et,
-            quantum possit, a philosophis compluribus permulta dicantur, cur nec
-            me
+            quantum possit, a philosophis compluribus permulta dicantur, cur
+            nec me ab illo inventore veritatis et quasi naturalem atque natum
+            sit, a se esse albam, dulce mel.
           </p>
-          <div class="section__box_third_content_videos">
-            <video
-              class="section__box_third_content_video"
-              data-aos="zoom-in-down"
-              data-aos-duration="1000"
-              data-aos-delay="100"
-            >
-              <source src="./VIDEO/video.mp4" />
-            </video>
-            <div
-              class="section__box_third_content_icons"
-              data-aos="zoom-in-down"
-              data-aos-duration="1000"
-              data-aos-delay="100"
-            >
-              <i class="fa fa-play" id="section__box_third_content_play"></i>
-              <i class="fa fa-pause" id="section__box_third_content_pause"></i>
-            </div>
+          <p class="section__box_second_paragraph_second" data-aos="fade-right" data-aos-duration="1000"
+            data-aos-delay="100">
+            At vero eos censes aut dolores eos, qui studiose antiqua
+            persequeris, claris et ultimum bonorum.
+          </p>
+          <a class="section__box_second_link" href="#" data-aos="fade-right" data-aos-duration="1000"
+            data-aos-delay="100">
+            Show All
+          </a>
+        </div>
+        <div class="section__box_second" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">
+          <img data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100" class="section__box_second_img"
+            src="./IMG/IMAGES/img2.jpg" alt="img2" />
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- /===================================== SECTION TO THE CODES END ================================== \ -->
+
+  <!-- /===================================== SECTION TO THE CODES START ================================ \ -->
+  <div class="container">
+    <div class="section__box_third">
+      <div class="section__box_third_content">
+        <h1 class="section__box_third_content_title" data-aos="zoom-in-down" data-aos-duration="1000"
+          data-aos-delay="100">
+          Improve your chances of getting event
+        </h1>
+        <p class="section__box_third_content_paragraph" data-aos="zoom-in-down" data-aos-duration="1000"
+          data-aos-delay="100">
+          At vero eos censes aut dolores eos, qui studiose antiqua
+          persequeris, claris et ultimum bonorum, quod summum malum et,
+          quantum possit, a philosophis compluribus permulta dicantur, cur nec
+          me
+        </p>
+        <div class="section__box_third_content_videos">
+          <video class="section__box_third_content_video" data-aos="zoom-in-down" data-aos-duration="1000"
+            data-aos-delay="100">
+            <source src="./VIDEO/video.mp4" />
+          </video>
+          <div class="section__box_third_content_icons" data-aos="zoom-in-down" data-aos-duration="1000"
+            data-aos-delay="100">
+            <i class="fa fa-play" id="section__box_third_content_play"></i>
+            <i class="fa fa-pause" id="section__box_third_content_pause"></i>
           </div>
         </div>
       </div>
     </div>
-    <!-- /===================================== SECTION TO THE CODES END ================================== \ -->
+  </div>
+  <!-- /===================================== SECTION TO THE CODES END ================================== \ -->
 
-    <!-- /===================================== FOOTER TO THE CODES START ================================ \ -->
-    <footer class="footer">
-      <div class="container">
-        <p class="footer__box_items">
-          © 2021 BEYOND MUSIC. All Rights Reserved
-        </p>
-      </div>
-    </footer>
-    <!-- /===================================== FOOTER TO THE CODES END ================================== \ -->
-    <script src="./JS/index.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  </body>
+  <!-- /===================================== FOOTER TO THE CODES START ================================ \ -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__box_items">
+        © 2021 BEYOND MUSIC. All Rights Reserved
+      </p>
+    </div>
+  </footer>
+  <!-- /===================================== FOOTER TO THE CODES END ================================== \ -->
+  <script src="./JS/index.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+
 </html>
