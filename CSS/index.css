@@ -1,11 +1,18 @@
-/* /============================================ BASIC TO THE CODES START =================================== \ */
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/* ****BASIC TO THE CODES START**** */
 @font-face {
-  font-family: 'Lato';
+  font-family: "Lato";
   src: url("../FONT/Lato-Light.ttf");
 }
 
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   src: url("../FONT/OPEN SANS/OpenSans/OpenSans-Light.ttf");
 }
 
@@ -16,6 +23,7 @@
   margin: 0;
   list-style: none;
   text-decoration: none;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
@@ -26,15 +34,15 @@
   --bg-color: #000;
   --text-color: #222222;
   --setProgress: rgb(0, 153, 255);
-  --shadow: #E5E5E5;
+  --shadow: #e5e5e5;
   --icon-color: #adacac;
   --section-text-color: #444444;
-  --star-color: #F7B500;
+  --star-color: #f7b500;
   --video-text-color: #181539;
-  --rock-music-text-color: #03014C;
-  --footer-bg-color: #F5F5FF;
+  --rock-music-text-color: #03014c;
+  --footer-bg-color: #f5f5ff;
   --footer-title-color: #353535;
-  --footer-paragraph-color: #13254A;
+  --footer-paragraph-color: #13254a;
   --foter-border-color: #979797;
 }
 
@@ -44,6 +52,11 @@ html {
 
 body {
   scroll-behavior: smooth;
+}
+
+::-moz-selection {
+  background-color: var(--section-text-color);
+  color: var(--link-color);
 }
 
 ::selection {
@@ -59,11 +72,9 @@ body {
   overflow-x: hidden;
 }
 
+/* ****BASIC TO THE CODES END**** */
 
-/* /============================================ BASIC TO THE CODES END ===================================== \ */
-
-/* /============================================ HEADER TO THE CODES START =================================== \ */
-
+/* ****SECRET NAVBAR START**** */
 .secret__navbar {
   position: fixed;
   top: 0;
@@ -72,20 +83,35 @@ body {
   width: 100%;
   z-index: 3;
   background-color: var(--link-color);
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
   transform: translateY(-100%);
-  transition: all .5s linear;
+  -webkit-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 
 .secret__navbar.active {
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
   transform: translateY(-100%);
 }
 
 .secret__navbar .secret__navbar_list {
   height: 100vh;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -103,40 +129,56 @@ body {
   position: absolute;
   right: 50px;
   top: 50px;
-
 }
 
+/* ****SECRET NAVBAR END**** */
+
+/* ****HEADER START**** */
 .header {
   height: 100px;
   width: 100%;
   position: sticky;
   top: 0;
-  transition: all .3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .header.active {
-  transition: all .3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
   height: 75px;
   background-color: var(--link-color);
   z-index: 1;
+  -webkit-box-shadow: 0 1px 2px var(--bg-color);
   box-shadow: 0 1px 2px var(--bg-color);
 }
 
 .header.active .nav {
   height: 75px;
-  transition: all .3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .nav {
-  transition: all .3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
   height: 100px;
   width: 100%;
   position: sticky;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
-
 
 .nav .nav__intro {
   color: var(--bg-color);
@@ -145,11 +187,13 @@ body {
 
 .nav .nav__list .nav__item {
   display: inline-block;
-  transition: all .3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .nav .nav__list .nav__item .nav__link {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 300;
   padding: 0 20px;
@@ -157,7 +201,6 @@ body {
   font-size: 18px;
   color: var(--bg-color);
   letter-spacing: 0.02em;
-
 }
 
 .nav__text {
@@ -175,14 +218,18 @@ body {
   display: none;
   margin: 0 0 15px 30px;
 }
+/* ****HEADER END**** */
 
-/* /============================================ HEADER TO THE CODES END ===================================== \ */
-
-
-/* /============================================ MAIN TO THE CODES END ===================================== \ */
+/* ****MAIN START**** */
 .main__section_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -191,7 +238,7 @@ body {
 }
 
 .main__section_box_content_paragraph.active {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -206,19 +253,18 @@ body {
   cursor: pointer;
   background-color: var(--bg-color);
   border-radius: 10px;
-
 }
 
 .main__section_box_music_play_border_box {
   height: 100%;
   width: 0;
-  box-shadow: 7px 7px 14px #d9d9d9,
-    -7px -7px 14px #ffffff;
+  -webkit-box-shadow: 7px 7px 14px #d9d9d9, -7px -7px 14px #ffffff;
+  box-shadow: 7px 7px 14px #d9d9d9, -7px -7px 14px #ffffff;
   background-color: var(--setProgress);
 }
 
 .main__section_box_content_title {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 1000;
   font-size: 48px;
   line-height: 65px;
@@ -226,23 +272,25 @@ body {
 }
 
 .main__section_box_content_paragraph {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 46px;
   letter-spacing: 0.03em;
-  opacity: .8;
+  opacity: 0.8;
   color: var(--text-color);
   margin: 25px 0;
 }
 
 .main__section_box_content_buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .main__section_box_content_buttons_btn.active {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -252,7 +300,9 @@ body {
   background-color: var(--text-color);
   padding: 10px 50px;
   border: 1px solid var(--text-color);
-  transition: all .3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .main__section_box_content_buttons_btn.active:hover {
@@ -261,7 +311,7 @@ body {
 }
 
 .main__section_box_content_buttons_btn {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -271,8 +321,14 @@ body {
   padding: 10px 40px;
   background-color: transparent;
   border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
 }
@@ -286,41 +342,60 @@ body {
 .main__section_box_music_play_img {
   height: 300px;
   width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -o-object-fit: cover;
   object-fit: cover;
   border-radius: 50%;
   background: #ffffff;
-  box-shadow: 7px 7px 14px #d9d9d9,
-    -7px -7px 14px #ffffff;
+  -webkit-box-shadow: 7px 7px 14px #d9d9d9, -7px -7px 14px #ffffff;
+  box-shadow: 7px 7px 14px #d9d9d9, -7px -7px 14px #ffffff;
   padding: 10px;
 }
 
 .main__section_box_music_play_title {
   text-align: center;
   margin: 25px 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 1000;
   font-size: 30px;
   letter-spacing: 1.5px;
 }
 
 .main__section_box_music_play_icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin: 40px 0 0 10px;
 }
 
 .main__section_box_music_play_icons i {
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background: #ffffff;
-  box-shadow: 7px 7px 14px #d9d9d9,
-    -7px -7px 14px #ffffff;
+  -webkit-box-shadow: 7px 7px 14px #d9d9d9, -7px -7px 14px #ffffff;
+  box-shadow: 7px 7px 14px #d9d9d9, -7px -7px 14px #ffffff;
   padding: 30px;
   cursor: pointer;
 }
@@ -336,15 +411,19 @@ body {
 .fa-pause {
   margin: 0 0 0 15px;
 }
+/* ****MAIN END**** */
 
-/* /============================================ MAIN TO THE CODES END ===================================== \ */
-
-
-/* /============================================ SECTION TO THE CODES START ================================ \ */
+/* ****SECTION START**** */
 .section__container {
   margin: 200px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 100px;
 }
@@ -359,14 +438,13 @@ body {
   position: relative;
 }
 
-
 .fa-check-circle {
   padding: 10px 0;
   color: var(--icon-color);
 }
 
 .section__box_content_title {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-style: normal;
   font-size: 35px;
   line-height: 57px;
@@ -375,7 +453,7 @@ body {
 }
 
 .section__box_content_paragraph {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   margin: 15px 0 0 0;
   font-weight: 400;
@@ -385,19 +463,22 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* /============================================ SECTION TO THE CODES END =============================== \ */
-
-/* /============================================ SECTION TO THE CODES START ============================ \ */
 .section__box_container_second {
   margin: 200px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 100px;
 }
 
 .section__box_second_title {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
@@ -407,7 +488,7 @@ body {
 }
 
 .section__box_second_paragraph_first {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -418,7 +499,7 @@ body {
 }
 
 .section__box_second_paragraph_second {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -440,7 +521,9 @@ body {
   border-radius: 4px;
   padding: 15px 40px;
   border: 1px solid var(--text-color);
-  transition: all .3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .section__box_second_link:hover {
@@ -458,10 +541,6 @@ body {
   border-radius: 16px;
 }
 
-/* /============================================ SECTION TO THE CODES END =============================== \ */
-
-
-/* /============================================ SECTION TO THE CODES START ============================= \ */
 .section__box_third_content_videos {
   position: relative;
 }
@@ -477,7 +556,7 @@ body {
 }
 
 .section__box_third_content_title {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 1000;
   font-size: 36px;
@@ -486,7 +565,7 @@ body {
 }
 
 .section__box_third_content_paragraph {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -497,8 +576,14 @@ body {
 }
 
 .section__box_third_content_icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   border: 1px solid var(--link-color);
   border-radius: 50%;
@@ -522,22 +607,27 @@ body {
   display: none;
   margin: 0 3px 0 0;
 }
+/* ****SECTION END**** */
 
-/* /============================================ SECTION TO THE CODES END =============================== \ */
-
-/* /============================================ FOOTER TO THE CODES START ============================= \ */
+/* ****FOOTER START***** */
 .footer {
   background-color: var(--bg-color);
   width: 100%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 100px 0;
   margin: 100px 0 0 0;
 }
 
 .footer__box_items {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 600;
   font-size: 13.9993px;
@@ -547,16 +637,22 @@ body {
   mix-blend-mode: normal;
   color: var(--link-color);
 }
+/* ****FOOTER END**** */
 
-/* /============================================ FOOTER TO THE CODES END =============================== \ */
-
-/* /============================================ RESPONSIVE TO THE CODES START ============================= \ */
+/* ****MEDIA RESPONSIVE START***** */
 @media (max-width: 1056px) {
   .section__box_container_second {
     margin: 400px 0 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 100px;
   }
@@ -569,9 +665,16 @@ body {
 
   .section__container {
     margin: 200px 0 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap-reverse;
     flex-wrap: wrap-reverse;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 100px;
   }
@@ -588,6 +691,7 @@ body {
     padding: 50px;
     background-color: var(--link-color);
     border-radius: 16px;
+    -webkit-box-shadow: 10px 10px 10px var(--shadow);
     box-shadow: 10px 10px 10px var(--shadow);
     position: absolute;
     bottom: -130px;
@@ -602,32 +706,57 @@ body {
 
 @media (max-width: 900px) {
   .main__section_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: left;
+    -ms-flex-pack: left;
     justify-content: left;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 100px;
   }
 
   .section__container {
     margin: 100px 0 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 100px;
   }
 
   .section__box_container_second {
     margin: 100px 0 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 100px;
   }
 
   .section__box_third_content_icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     border: 1px solid var(--link-color);
     border-radius: 50%;
@@ -638,7 +767,6 @@ body {
     right: 42%;
     cursor: pointer;
   }
-
 }
 
 @media (max-width: 700px) {
@@ -662,6 +790,8 @@ body {
   }
 
   .nav {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     height: 100px;
   }
@@ -715,15 +845,22 @@ body {
   }
 
   .main__section_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 100px;
   }
 
   .main__section_box_content_title {
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 1000;
     font-size: 35px;
     line-height: 65px;
@@ -731,7 +868,7 @@ body {
   }
 
   .section__box_content_title {
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     font-style: normal;
     font-size: 30px;
     line-height: 57px;
@@ -740,7 +877,7 @@ body {
   }
 
   .section__box_content_paragraph {
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     font-style: normal;
     margin: 15px 0 0 0;
     font-weight: 400;
@@ -751,7 +888,7 @@ body {
   }
 
   .section__box_second_title {
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
@@ -761,7 +898,7 @@ body {
   }
 
   .section__box_third_content_title {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-style: normal;
     font-weight: 1000;
     font-size: 30px;
@@ -770,8 +907,14 @@ body {
   }
 
   .section__box_third_content_icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     border: 1px solid var(--link-color);
     border-radius: 50%;
@@ -784,7 +927,7 @@ body {
   }
 
   .section__box_third_content_paragraph {
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -817,7 +960,7 @@ body {
   }
 
   .main__section_box_content_title {
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 1000;
     font-size: 35px;
     line-height: 50px;
@@ -825,7 +968,7 @@ body {
   }
 
   .main__section_box_content_buttons_btn.active {
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -835,7 +978,9 @@ body {
     background-color: var(--text-color);
     padding: 5px 40px;
     border: 1px solid var(--text-color);
-    transition: all .3s linear;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
   }
 
   .fa-bars {
@@ -845,15 +990,21 @@ body {
   .footer {
     background-color: var(--bg-color);
     width: 100%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 100px 0;
     margin: 50px 0 0 0;
   }
 
   .footer__box_items {
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
@@ -891,7 +1042,7 @@ body {
   }
 
   .main__section_box_content_title {
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 1000;
     font-size: 30px;
     line-height: 50px;
@@ -899,13 +1050,13 @@ body {
   }
 
   .main__section_box_content_paragraph {
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;
     letter-spacing: 0.03em;
-    opacity: .8;
+    opacity: 0.8;
     color: var(--text-color);
     margin: 20px 0;
   }
@@ -919,7 +1070,7 @@ body {
   }
 
   .main__section_box_content_buttons_btn.active {
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -929,13 +1080,15 @@ body {
     background-color: var(--text-color);
     padding: 0 50px;
     border: 1px solid var(--text-color);
-    transition: all .3s linear;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
   }
 
   .main__section_box_music_play_title {
     text-align: center;
     margin: 25px 0;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 1000;
     font-size: 25px;
     letter-spacing: 1.5px;
@@ -943,17 +1096,24 @@ body {
 
   .main__section_box_music_play_icons i {
     border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     background: #ffffff;
+    -webkit-box-shadow: 7px 7px 14px #d9d9d9, -7px -7px 14px #ffffff;
     box-shadow: 7px 7px 14px #d9d9d9, -7px -7px 14px #ffffff;
     padding: 25px;
     cursor: pointer;
   }
 
   .section__box_content_title {
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     font-style: normal;
     font-size: 26px;
     line-height: 57px;
@@ -962,7 +1122,7 @@ body {
   }
 
   .section__box_second_title {
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     font-style: normal;
     font-weight: 700;
     font-size: 25px;
@@ -972,7 +1132,7 @@ body {
   }
 
   .section__box_third_content_title {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-style: normal;
     font-weight: 1000;
     font-size: 25px;
@@ -981,8 +1141,14 @@ body {
   }
 
   .section__box_third_content_icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     border: 1px solid var(--link-color);
     border-radius: 50%;
@@ -995,7 +1161,7 @@ body {
   }
 
   .footer__box_items {
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     font-style: normal;
     font-weight: 600;
     font-size: 11px;
@@ -1031,14 +1197,22 @@ body {
   .main__section_box_music_play_img {
     height: 200px;
     width: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     text-align: center;
     margin: 0 auto;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -o-object-fit: cover;
     object-fit: cover;
     border-radius: 50%;
     background: #ffffff;
+    -webkit-box-shadow: 7px 7px 14px #d9d9d9, -7px -7px 14px #ffffff;
     box-shadow: 7px 7px 14px #d9d9d9, -7px -7px 14px #ffffff;
     padding: 10px;
   }
@@ -1054,10 +1228,17 @@ body {
 
   .main__section_box_music_play_icons i {
     border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     background: #ffffff;
+    -webkit-box-shadow: 7px 7px 14px #d9d9d9, -7px -7px 14px #ffffff;
     box-shadow: 7px 7px 14px #d9d9d9, -7px -7px 14px #ffffff;
     padding: 25px;
     cursor: pointer;
@@ -1065,7 +1246,7 @@ body {
   }
 
   .main__section_box_content_buttons_btn.active {
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -1074,11 +1255,13 @@ body {
     color: var(--link-color);
     background-color: var(--text-color);
     border: 1px solid var(--text-color);
-    transition: all .3s linear;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
   }
 
   .main__section_box_content_paragraph.active {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 13px;
@@ -1088,7 +1271,7 @@ body {
   }
 
   .main__section_box_content_title {
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 1000;
     font-size: 25px;
     line-height: 40px;
@@ -1096,7 +1279,7 @@ body {
   }
 
   .section__box_content_title {
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     font-style: normal;
     font-size: 25px;
     line-height: 40px;
@@ -1104,5 +1287,4 @@ body {
     letter-spacing: 0.5px;
   }
 }
-
-/* /============================================ RESPONSIVE TO THE CODES END =============================== \ */
+/* ****MEDIA RESPONSIVE END***** */

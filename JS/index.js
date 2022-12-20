@@ -1,41 +1,21 @@
 window.addEventListener("load", Loaded);
 
+AOS.init();
+
 function Loaded() {
   window.addEventListener("scroll", () => {
     $(".header").classList.toggle("active", window.scrollY > 0);
   });
 
   // MUSIC PLAYER TO THE CODES START
-
-  let navText = document.querySelector(".nav__text");
-  let MusicImage = document.querySelector(".main__section_box_music_play_img");
-  let musicPlay = document.querySelector(
-    ".main__section_box_music_play_icons .fa-play"
-  );
-  let musicPause = document.querySelector(
-    ".main__section_box_music_play_icons .fa-pause"
-  );
-  let next = document.querySelector(".fa-forward");
-  let prev = document.querySelector(".fa-backward");
-  let title = document.querySelector(".main__section_box_music_play_title");
-  let audio = document.getElementById("audio");
-  let progress = document.querySelector(
-    ".main__section_box_music_play_border_box"
-  );
-  let progressContainer = document.querySelector(
-    ".main__section_box_music_play_border"
-  );
-  let video = document.querySelector(".section__box_third_content_video");
-  let playVideo = document.getElementById("section__box_third_content_play");
-  let pauseVideo = document.getElementById("section__box_third_content_pause");
-  let faPause = document.getElementById("fa-pause");
-  let faPlay = document.querySelector(".fa-circle-play");
   let index = 0;
 
   const MusicPlayerName = ["Burn It down", "MBAND", "User not found"];
 
   function MusicPlayerFunction(song) {
-    $(".main__section_box_music_play_img").src = `../IMG/MUSIC-IMAGES/${song}.jpg`;
+    $(
+      ".main__section_box_music_play_img"
+    ).src = `../IMG/MUSIC-IMAGES/${song}.jpg`;
     $("#audio").src = `../MUSIC/${song}.mp3`;
     $(".main__section_box_music_play_title").innerHTML = song;
   }
@@ -43,7 +23,10 @@ function Loaded() {
 
   // MUSIC PLAY BUTTON
 
-  $(".main__section_box_music_play_icons .fa-play").addEventListener("click", justPlay);
+  $(".main__section_box_music_play_icons .fa-play").addEventListener(
+    "click",
+    justPlay
+  );
 
   function justPlay() {
     faPauserMusicPlayer();
@@ -54,7 +37,10 @@ function Loaded() {
 
   // MUSIC PAUSE TO THE CODES START
 
-  $(".main__section_box_music_play_icons .fa-pause").addEventListener("click", justPause);
+  $(".main__section_box_music_play_icons .fa-pause").addEventListener(
+    "click",
+    justPause
+  );
 
   function justPause() {
     $("#audio").pause();
@@ -99,10 +85,15 @@ function Loaded() {
   function Progress(e) {
     const { duration, currentTime } = e.srcElement;
     const progressTime = (currentTime / duration) * 100;
-    $(".main__section_box_music_play_border_box").style.width = `${progressTime}%`;
+    $(
+      ".main__section_box_music_play_border_box"
+    ).style.width = `${progressTime}%`;
   }
 
-  $(".main__section_box_music_play_border").addEventListener("click", setProgress);
+  $(".main__section_box_music_play_border").addEventListener(
+    "click",
+    setProgress
+  );
 
   function setProgress(e) {
     const width = this.clientWidth;
@@ -155,36 +146,29 @@ function Loaded() {
 
   // AOS LIBRARY TO THE CODES START
 
-  AOS.init();
-
   // SECRET BUTTON LINK TO THE CODES START
 
-  let secretLink = document.querySelectorAll(".secret__navbar_link");
-  let secretNavbar = document.querySelector(".secret__navbar");
-  let barsIcon = document.querySelector(".nav__list .fa-bars");
-  let timesIcon = document.querySelector(".fa-times");
-  let secretJob = false;
   $$(".secret__navbar_link").forEach((item) => {
     item.addEventListener("click", secretButtonNavbar);
 
     function secretButtonNavbar() {
-      secretNavbar.style.transform = "translateY(-100%)";
+      $(".secret__navbar").style.transform = "translateY(-100%)";
     }
   });
 
   // OPEN NAVBAR TO THE CODES START
 
-  barsIcon.addEventListener("click", OpenNavbar);
+  $(".nav__list .fa-bars").addEventListener("click", OpenNavbar);
 
   function OpenNavbar() {
-    secretNavbar.style.transform = "translateY(0)";
+    $(".secret__navbar").style.transform = "translateY(0)";
   }
 
   // CLOSE NAVBAR TO THE CODES START
 
-  timesIcon.addEventListener("click", closeNavbar);
+  $(".fa-times").addEventListener("click", closeNavbar);
 
   function closeNavbar() {
-    secretNavbar.style.transform = "translateY(-100%)";
+    $(".secret__navbar").style.transform = "translateY(-100%)";
   }
 }
